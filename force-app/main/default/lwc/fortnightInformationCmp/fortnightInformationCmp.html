@@ -1,3 +1,53 @@
 <template>
-    
+    <lightning-card variant="Narrow" title="Fortnight Information" icon-name="standard:article">
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col inf-card">
+                    <p>
+                        <b><span>Name</span></b><br/>
+                        <lightning-formatted-text value={nameValue}>
+                        </lightning-formatted-text>
+                    </p>
+                </div>
+                <div class="slds-col inf-card">
+                    <p>
+                        <b><span>Total Fixed Costs</span></b><br/>
+                        <lightning-formatted-number
+                            value={totalFixedCost}
+                            format-style="currency"
+                            currency-code="COP"
+                        >
+                        </lightning-formatted-number>
+                    </p>
+                </div>
+                <div class="slds-col inf-card">
+                    <p>
+                        <b><span>Total Purchases</span></b><br/>
+                        <lightning-formatted-number
+                            value={totalPurchases}
+                            format-style="currency"
+                            currency-code="COP"
+                        >
+                        </lightning-formatted-number>
+                    </p>
+                </div>
+                <div class="slds-col inf-card">
+                    <p>
+                        <b><span>Total Spent</span></b><br/>
+                        <lightning-formatted-number
+                            value={totalSpents}
+                            format-style="currency"
+                            currency-code="COP"
+                        >
+                        </lightning-formatted-number>
+                    </p>
+                </div>  
+            </div>
+        </div>
+        <div  slot="footer" >
+            <lightning-button-icon icon-name="utility:edit" variant="brand" alternative-text="Edit information" onclick={editHandleBtm}></lightning-button-icon>
+            <lightning-button-icon icon-name="utility:table" variant="brand" alternative-text="Back to list view" onclick={backHandleBtm} class="slds-m-left_xx-small"></lightning-button-icon>
+            <lightning-button-icon icon-name="utility:delete" variant="brand" alternative-text="Delete record" onclick={deleteHandleBtm} class="slds-m-left_xx-small"></lightning-button-icon>   
+        </div>
+    </lightning-card>
 </template>
