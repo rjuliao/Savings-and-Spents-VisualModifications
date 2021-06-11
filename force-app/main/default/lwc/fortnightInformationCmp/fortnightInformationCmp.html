@@ -35,6 +35,7 @@
                     <p>
                         <b><span>Total Spent</span></b><br/>
                         <lightning-formatted-number
+                            class={getColorValue}
                             value={totalSpents}
                             format-style="currency"
                             currency-code="COP"
@@ -44,7 +45,7 @@
                 </div>  
             </div>
         </div>
-        <div  slot="footer" >
+        <div slot="footer" >
             <lightning-button-icon icon-name="utility:edit" variant="brand" alternative-text="Edit information" onclick={editHandleBtm}></lightning-button-icon>
             <lightning-button-icon icon-name="utility:table" variant="brand" alternative-text="Back to list view" onclick={backHandleBtm} class="slds-m-left_xx-small"></lightning-button-icon>
             <lightning-button-icon icon-name="utility:delete" variant="brand" alternative-text="Delete record" onclick={deleteHandleBtm} class="slds-m-left_xx-small"></lightning-button-icon>   
