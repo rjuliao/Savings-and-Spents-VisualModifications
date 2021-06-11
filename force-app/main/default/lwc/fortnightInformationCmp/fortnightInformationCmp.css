@@ -1,7 +1,15 @@
-.lgc-bg {
-    background-color: rgb(242, 242, 242);
-}
-
 .inf-card{
     text-align: center;
+}
+
+.value1{
+    color: darkorange;
+}
+
+.value2{
+    color: darkred;
+}
+
+.value3{
+    color: darkgreen;
 }
